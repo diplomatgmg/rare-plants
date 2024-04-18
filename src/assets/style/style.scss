@@ -1,4 +1,6 @@
 $background-color: #1d2f30;
+$dark-green: #0b1919;
+$light-green: #bae249;
 
 @font-face {
   font-family: Cormorant;
@@ -177,13 +179,13 @@ body {
   background-position: center;
   background-size: cover;
 
-  &__container {
-    max-width: 700px;
-  }
-
   &__title {
     font-family: Cormorant, sans-serif;
     font-size: 3rem;
+  }
+
+  &__text {
+    max-width: 620px;
   }
 
 
@@ -197,6 +199,9 @@ body {
     gap: .5rem;
 
     img {
+      position: relative;
+      top: 1px;
+
       height: 1.5rem;
     }
   }
@@ -220,6 +225,127 @@ body {
   .hero {
     &__title {
       font-size: 2rem;
+    }
+  }
+}
+
+// GALLERY
+
+.gallery {
+  padding: 5rem 0;
+
+  background-color: $background-color;
+}
+
+
+.slider {
+  &__list {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
+    gap: 1rem;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    padding: 12px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid $dark-green;
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 90px;
+    padding: 10%;
+
+    background-color: $dark-green;
+
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: Cormorant, sans-serif;
+    font-size: 1.25rem;
+
+    margin: 0;
+  }
+
+  &__text {
+    font-size: .75rem;
+
+    color: #899d9d;
+  }
+
+  &__link {
+    font-size: .825rem;
+
+    width: fit-content;
+    margin-top: auto;
+    padding: .5rem 1rem;
+
+    text-decoration: none;
+
+    color: $light-green;
+    border: 1px solid $light-green;
+  }
+
+  &__controls {
+    font-family: Cormorant, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+
+    gap: 20px;
+  }
+
+  &__left,
+  &__right {
+    position: relative;
+    top: 3px;
+
+    display: flex;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  &__left {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    &__list {
+      grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .slider {
+    &__list {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
   }
 }
