@@ -232,7 +232,7 @@ body {
 // GALLERY
 
 .gallery {
-  padding: 5rem 0;
+  padding-top: 5rem;
 
   background-color: $background-color;
 }
@@ -240,7 +240,9 @@ body {
 
 .slider {
   overflow: hidden;
+
   padding: 0 12px;
+
   &__list {
     display: flex;
   }
@@ -248,15 +250,17 @@ body {
   &__inner {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    padding: 0.75rem;
 
+    height: 100%;
+    padding: .75rem;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
+
     height: 350px;
+
     border: 2px solid $dark-green;
   }
 
@@ -293,13 +297,14 @@ body {
     font-size: .825rem;
 
     width: fit-content;
-    margin-block-start: auto;
     padding: .5rem 1rem;
 
     text-decoration: none;
 
     color: $light-green;
     border: 1px solid $light-green;
+
+    margin-block-start: auto;
   }
 
   &__controls {
@@ -312,6 +317,7 @@ body {
     justify-content: center;
 
     margin-top: 2rem;
+    margin-left: 3rem;
 
     gap: 20px;
   }
@@ -333,3 +339,152 @@ body {
   }
 }
 
+// ARTIFACTS
+
+.artifacts {
+  padding: 2rem 0 3rem;
+
+  background-color: $background-color;
+
+
+
+  &__title {
+    font-family: Cormorant, sans-serif;
+    font-size: 3rem;
+    font-style: italic;
+
+    margin: 0 0 2rem;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    gap: 20px;
+  }
+
+  &__image {
+    padding: 1rem;
+
+    background-color: $dark-green;
+
+    img {
+      max-width: 100%;
+
+      object-position: left;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    width: 35%;
+    padding: 1.5rem;
+
+    color: #000;
+    background-color: $light-green;
+  }
+
+  &__subtitle {
+    font-family: Cormorant, sans-serif;
+    font-size: 1.5rem;
+
+    margin: 0;
+
+    white-space: nowrap;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+
+    opacity: .5;
+  }
+
+  &__link {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    margin-top: auto;
+
+    text-decoration: none;
+
+    color: #000;
+
+
+    img {
+      position: relative;
+      top: 9px;
+
+      width: 35px;
+
+      filter: brightness(0);
+    }
+  }
+}
+
+
+@media (max-width: 1280px) {
+  .artifacts {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__card {
+      width: 100%;
+      padding: 0;
+
+      background-color: transparent;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+
+      color: #fff;
+    }
+
+    &__text {
+      width: 100%;
+
+      color: #fff;
+    }
+
+    &__link {
+      color: $light-green;
+
+      img {
+        filter: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .artifacts {
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+    }
+    &__text {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .artifacts {
+    &__title {
+      font-size: 2.25rem;
+    }
+
+    &__subtitle {
+      font-size: 1.75rem;
+    }
+    &__text {
+      font-size: .75rem;
+    }
+  }
+}
