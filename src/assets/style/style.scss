@@ -58,6 +58,17 @@ body {
 }
 
 
+.btn {
+  font-size: .825rem;
+
+  width: fit-content;
+  padding: .5rem 1rem;
+
+  text-decoration: none;
+
+  border: 1px solid $light-green;
+}
+
 // HEADER
 .header {
   padding: 1.5rem 0;
@@ -293,16 +304,9 @@ body {
     color: #899d9d;
   }
 
+
   &__link {
-    font-size: .825rem;
-
-    width: fit-content;
-    padding: .5rem 1rem;
-
-    text-decoration: none;
-
     color: $light-green;
-    border: 1px solid $light-green;
 
     margin-block-start: auto;
   }
@@ -345,7 +349,6 @@ body {
   padding: 2rem 0 3rem;
 
   background-color: $background-color;
-
 
 
   &__title {
@@ -468,6 +471,7 @@ body {
     &__subtitle {
       font-size: 2rem;
     }
+
     &__text {
       font-size: 1rem;
     }
@@ -483,8 +487,111 @@ body {
     &__subtitle {
       font-size: 1.75rem;
     }
+
     &__text {
       font-size: .75rem;
     }
+  }
+}
+
+// CONTACT
+
+.contact {
+  padding: 4rem 0;
+
+  background-image: url('../img/contact-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+
+
+  &__title {
+    font-family: Cormorant, sans-serif;
+    font-size: 3.5rem;
+    font-style: italic;
+
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+
+    width: 900px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    width: 400px;
+    margin-top: 2rem;
+
+    gap: .75rem;
+
+    input {
+      height: 3rem;
+      padding-left: 1rem;
+
+      outline: none;
+    }
+
+    button {
+      font-weight: bold;
+
+      margin-top: 1rem;
+      padding: 1rem 2.25rem;
+
+      background-color: $light-green;
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .contact {
+    display: none;
+  }
+}
+
+
+// FOOTER
+
+.footer {
+  padding-top: 1.5rem;
+
+  background-color: $dark-green;
+  &__links {
+    display: flex;
+    justify-content: center;
+
+    margin: 0 0 1rem;
+
+    gap: 2.5rem;
+  }
+
+  &__link {
+    list-style: none;
+
+    cursor: pointer;
+
+    img {
+      width: 35px;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+
+    padding: .5rem 0;
+
+    background-color: $background-color;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    display: none;
   }
 }
