@@ -343,6 +343,22 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .slider {
+    &__controls {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .slider {
+    &__controls {
+      margin-left: 0;
+    }
+  }
+}
+
 // ARTIFACTS
 
 .artifacts {
@@ -505,7 +521,6 @@ body {
   background-size: cover;
 
 
-
   &__title {
     font-family: Cormorant, sans-serif;
     font-size: 3.5rem;
@@ -561,6 +576,7 @@ body {
   padding-top: 1.5rem;
 
   background-color: $dark-green;
+
   &__links {
     display: flex;
     justify-content: center;
