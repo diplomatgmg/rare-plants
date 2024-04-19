@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <title>Rare Plants</title>
 </head>
 <body>
@@ -56,9 +58,9 @@
 
   <section class="gallery">
     <div class="container gallery__container">
-      <div class="slider">
-        <div class="slider__list">
-          <div class="slider__item">
+      <div class="slider swiper-container">
+        <div class="slider__list swiper-wrapper">
+          <div class="slider__item swiper-slide">
             <div class="slider__image">
               <img src="./src/assets/img/layer-1.png" alt="">
             </div>
@@ -69,7 +71,7 @@
               <a class="slider__link" href="#">Подробнее</a>
             </div>
           </div>
-          <div class="slider__item">
+          <div class="slider__item swiper-slide">
             <div class="slider__image">
               <img src="./src/assets/img/layer-2.png" alt="">
             </div>
@@ -80,7 +82,7 @@
               <a class="slider__link" href="#">Подробнее</a>
             </div>
           </div>
-          <div class="slider__item">
+          <div class="slider__item swiper-slide">
             <div class="slider__image">
               <img src="./src/assets/img/layer-3.png" alt="">
             </div>
@@ -91,7 +93,7 @@
               <a class="slider__link" href="#">Подробнее</a>
             </div>
           </div>
-          <div class="slider__item">
+          <div class="slider__item swiper-slide">
             <div class="slider__image">
               <img src="./src/assets/img/layer-4.png" alt="">
             </div>
@@ -102,7 +104,7 @@
               <a class="slider__link" href="#">Подробнее</a>
             </div>
           </div>
-          <div class="slider__item">
+          <div class="slider__item swiper-slide">
             <div class="slider__image">
               <img src="./src/assets/img/layer-1.png" alt="">
             </div>
@@ -113,7 +115,7 @@
               <a class="slider__link" href="#">Подробнее</a>
             </div>
           </div>
-          <div class="slider__item">
+          <div class="slider__item swiper-slide">
             <div class="slider__image">
               <img src="./src/assets/img/layer-2.png" alt="">
             </div>
@@ -124,7 +126,7 @@
               <a class="slider__link" href="#">Подробнее</a>
             </div>
           </div>
-          <div class="slider__item">
+          <div class="slider__item swiper-slide">
             <div class="slider__image">
               <img src="./src/assets/img/layer-3.png" alt="">
             </div>
@@ -135,7 +137,7 @@
               <a class="slider__link" href="#">Подробнее</a>
             </div>
           </div>
-          <div class="slider__item">
+          <div class="slider__item swiper-slide">
             <div class="slider__image">
               <img src="./src/assets/img/layer-4.png" alt="">
             </div>
@@ -160,6 +162,32 @@
     </div>
   </section>
 </main>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.swiper-container', {
+    loop: true,
+    // autoplay: {
+    //   delay: 3000,
+    // },
+    navigation: {
+      prevEl: '.slider__left',
+      nextEl: '.slider__right',
+    },
+    centeredSlides: true,
+    spaceBetween: 30,
+    breakpoints: {
+      968: {
+        slidesPerView: 4,
+      },
+      568: {
+        slidesPerView: 2,
+      }
+    }
+
+  });
+</script>
 <script type="module" src="/src/index.tsx"></script>
 </body>
 </html>

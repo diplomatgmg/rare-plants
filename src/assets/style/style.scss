@@ -239,25 +239,24 @@ body {
 
 
 .slider {
+  overflow: hidden;
+  padding: 0 12px;
   &__list {
-    display: grid;
-
-    grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
-    gap: 1rem;
+    display: flex;
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
-
     height: 100%;
-    padding: 12px;
+    padding: 0.75rem;
+
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-
+    height: 350px;
     border: 2px solid $dark-green;
   }
 
@@ -294,7 +293,7 @@ body {
     font-size: .825rem;
 
     width: fit-content;
-    margin-top: auto;
+    margin-block-start: auto;
     padding: .5rem 1rem;
 
     text-decoration: none;
@@ -334,18 +333,3 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .slider {
-    &__list {
-      grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
-    }
-  }
-}
-
-@media (max-width: 420px) {
-  .slider {
-    &__list {
-      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-    }
-  }
-}
